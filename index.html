@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
+  <link rel="stylesheet" href="css/styles.css">
+  <audio id="alarm" src="sound/alarme.mp3" preload="auto"></audio>
+  <style>
+    .code-by-container {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #333; 
+      padding: 10px 0; 
+      text-align: center; 
+      font-family: Arial, sans-serif; 
+      font-size: 14px; 
+      color: #fff; 
+      opacity: 0.8; 
+      transition: opacity 0.3s; 
+    }
+
+    .code-by-container:hover {
+      opacity: 1; 
+    }
+
+    .code-by-container span {
+      font-weight: bold; 
+    }
+
+    .icon-link {
+      margin-left: 5px; 
+      margin-right: 5px; 
+      color: #fff;
+    }
+
+    .icon-link:hover {
+      color: #007bff; 
+    }
+  </style>
+</head>
+<body>
+  <div class="switch-container">
+    <input type="checkbox" id="themeToggle">
+    <label class="switch" for="themeToggle"></label>
+    <div class="light-bulb"></div>
+  </div>
+  
+  <div class="container">
+    <h1>Pomodoro Timer</h1>
+    <div class="timer" id="timer">
+      <span id="hours" contenteditable="true">00</span>:<span id="minutes" contenteditable="true">00</span>:<span id="seconds" contenteditable="true">00</span>
+    </div>
+    <div class="controls">
+      <button id="start">Iniciar</button>
+      <button id="pause">Pausar</button>
+    </div>
+  </div>
+  
+  <div class="code-by-container">
+    <span>Code by Affonso Helmuth</span>
+    <a href="https://github.com/affonsohelmuth" target="_blank" class="icon-link"><i class="fab fa-github"></i></a> 
+    <a href="https://www.linkedin.com/in/affonso-helmuth-r-33479a287?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BcPj4ddLBRSqBv4IRWRKebw%3D%3D" target="_blank" class="icon-link"><i class="fab fa-linkedin"></i></a> 
+  </div>
+  
+  <script src="js/script.js"></script>
+</body>
+</html>
